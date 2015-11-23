@@ -15,7 +15,7 @@ $fade-time: 500ms;
 	-moz-transition: border $fade-time ease;
 	-ms-transition: border $fade-time ease;
 	-o-transition: border $fade-time ease;
-	transition: border $fade-time ease; 
+	transition: border $fade-time ease;
 	&:hover{border-bottom: 1px solid rgba($color, 1);}
 }
 
@@ -30,7 +30,7 @@ body{
 	color: $primary-text-color;
 	text-align: center;
 	margin: 0px;
-	}	
+	}
 p{
 	margin-left: 4px;
 	margin-right: 4px;
@@ -48,23 +48,32 @@ li{
 
 
 // Top-Nav
-	
+
 #top-nav{
+	position: relative;
 	background-color: $header-background-color;
-	
+	background-image: url(images/banner-bg.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	text-align: left;
+	height: 150px;
 	a{
 		text-decoration: none;
 		color: $header-text-color;
 		@include fading-underline($header-text-color);
 	}
 }
-	
+
 #top-nav > ul{
+	position: absolute;
+	bottom: 0;
+	padding-left: 10px;
+	margin-bottom: 5px;
 	display: inline;
 }
 
 #top-nav li{
 	display: inline-block;
-	
-	
+
+
 }
