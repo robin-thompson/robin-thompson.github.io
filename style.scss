@@ -45,6 +45,10 @@ li{
 	padding: 5px;
 }
 
+.content{
+	padding: 10px;
+}
+
 
 // Top-Nav
 
@@ -77,4 +81,8 @@ li{
 
 #top-nav .active a{
 	border-bottom: 1px solid rgba($header-text-color, 1);
+}
+
+#publications ul{
+	list-style-type: decimal;
 }
