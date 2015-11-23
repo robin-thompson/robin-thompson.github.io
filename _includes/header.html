@@ -1,11 +1,7 @@
 <header>
 	<div id="top-nav">
 		<ul>
-			{% for i in (1..10) %}
-			{% assign pages_list = site.pages %}
-			{% assign navorder = i %}
-  		{% include pages_list %}
-			{% endfor %}
+			{% for i in (1..5) %}	{% assign pages_list = site.pages %}{% assign navorder = i %}{% include pages_list %}{% endfor %}
 		</ul>
 	</div>
 </header>
