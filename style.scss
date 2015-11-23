@@ -1,7 +1,13 @@
 ---
 ---
 $primary-text-color: #000;
-$primary-background-color: #e5e5e5;
+$primary-background-color: #FFF;
+
+$header-background-color: #002147;
+$header-text-color: #FFF;
+
+$fade-time: 500ms;
+
 
 @mixin fading-underline($color){
 	border-bottom: 1px solid rgba($color, 0);
@@ -28,4 +34,40 @@ body{
 p{
 	margin-left: 4px;
 	margin-right: 4px;
+}
+
+a{
+	@include fading-underline($primary-text-color);	
+	text-decoration: none;
+	color: $primary-text-color
+}
+
+ul{
+	list-style-type: none;
+}
+
+li{
+	padding: 5px;
+}
+
+
+// Top-Nav
+	
+#top-nav{
+	background-color: $header-background-color;
+	
+	a{
+		color: $header-text-color;
+		@include fading-underline($header-text-color);
+	}
+}
+	
+#top-nav > ul{
+	display: inline;
+}
+
+#top-nav li{
+	display: inline-block;
+	
+	
 }
