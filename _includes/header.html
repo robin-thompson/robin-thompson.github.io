@@ -1,12 +1,11 @@
 <header>
 	<div id="top-nav">
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="teaching.html">Teaching</a></li>
-			<li><a href="about.html">About Me</a></li>
-			<li><a href="publications.html">Publications</a></li>
-			<li><a href="research.html">Research</a></li>
+			{% for i in (1..10) %}
+			{% assign pages_list = site.pages %}
+			{% assign navorder = i %}
+  		{% include pages_list %}
+			{% endfor %}
 		</ul>
 	</div>
-	
 </header>
