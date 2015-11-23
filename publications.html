@@ -2,3 +2,11 @@
 title: Publications
 layout: default
 ---
+
+<div id="publications">
+	<ul>
+	{% for post in site.posts %}
+	<li>{{ post.authors }} ({{ post.year }}) {{ post.title }} (<a href="{{ post.link }}" target="_blank">{{ post.linkname }}</a>)</li>
+	{% endfor %}
+	</ul>
+</div>
