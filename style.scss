@@ -74,6 +74,8 @@ li{
 
 #top-nav li{
 	display: inline-block;
+}
 
-
+#top-nav .active a{
+	border-bottom: 1px solid rgba($header-text-color, 1);
 }
