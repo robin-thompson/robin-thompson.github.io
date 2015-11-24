@@ -8,6 +8,8 @@ $header-text-color: #FFF;
 
 $fade-time: 500ms;
 
+$footer-height: 60px;
+
 
 @mixin fading-underline($color){
 	border-bottom: 1px solid rgba($color, 0);
@@ -21,6 +23,7 @@ $fade-time: 500ms;
 
 html{
 	font-family: roboto;
+	height: 100%;
 }
 
 
@@ -29,6 +32,8 @@ body{
 	background-color: $primary-background-color;
 	color: $primary-text-color;
 	margin: 0px;
+	padding: 0px;
+	height: 100%;
 	}
 p{
 	margin-left: 4px;
@@ -45,10 +50,16 @@ li{
 	padding: 5px;
 }
 
-.content{
-	padding: 10px;
+
+#wrapper{
+	min-height: 100%;
+	position: relative;
 }
 
+#content{
+	padding: 10px;
+	padding-bottom: $footer-height;
+}
 
 // Top-Nav
 
@@ -81,6 +92,20 @@ li{
 
 #top-nav .active a{
 	border-bottom: 1px solid rgba($header-text-color, 1);
+}
+
+#footer{
+	position: absolute;
+	bottom: 0px;
+	background-color: $header-background-color;
+	color: $header-text-color;
+	width: 100%;
+	height: $footer-height;
+	a{
+		text-decoration: none;
+		color: $header-text-color;
+		@include fading-underline($header-text-color);
+	}
 }
 
 #publications ul{
