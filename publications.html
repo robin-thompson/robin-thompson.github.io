@@ -5,8 +5,8 @@ navorder: 2
 
 <div id="publications">
 	<ul>
-	{% for post in site.posts %}
-	<li>{{ post.authors }} {{ post.title }} {% if post.link != null %}(<a href="{{ post.link }}" target="_blank">{{ post.linkname }}</a>){% endif %} ({{ post.year }}) {{ post.ref }}</li>
+	{% for publication in site.publications %}
+	<li>{{ publication.authors }} {{ publication.title }} {% if publication.link != null %}(<a href="{{ publication.link }}" target="_blank">{{ publication.linkname }}</a>){% endif %} ({{ publication.year }}) {{ publication.ref }}</li>
 	{% endfor %}
 	</ul>
 </div>
