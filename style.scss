@@ -8,7 +8,7 @@ $header-text-color: #FFF;
 
 $fade-time: 500ms;
 
-$footer-height: 60px;
+$footer-height: 80px;
 
 
 @mixin fading-underline($color){
@@ -59,6 +59,9 @@ li{
 #content{
 	padding: 10px;
 	padding-bottom: $footer-height;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 // Top-Nav
@@ -101,6 +104,7 @@ li{
 	color: $header-text-color;
 	width: 100%;
 	height: $footer-height;
+	text-align: center;
 	a{
 		text-decoration: none;
 		color: $header-text-color;
