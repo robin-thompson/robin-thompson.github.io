@@ -11,6 +11,7 @@ $fade-time: 500ms;
 $footer-height: 80px;
 
 
+
 @mixin fading-underline($color){
 	border-bottom: 1px solid rgba($color, 0);
 	-webkit-transition: border $fade-time ease;
@@ -117,4 +118,73 @@ li{
 		color: $header-text-color;
 		@include fading-underline($header-text-color);
 	}
+}
+
+#hamburger{
+	display: none;
+}
+
+#mob-nav{
+	display: none;
+	background-color: $header-background-color;
+  font-size: 1.5em;
+  z-index: 1000;
+  text-align: left;
+  max-width: 300px;
+  left: -350px;
+  position: fixed;
+	ul{
+		margin: 8px;
+		padding-left: 0px;
+		list-style-type: none;
+		a{
+			text-decoration: none;
+			color: $header-text-color;
+			@include fading-underline($header-text-color);
+		}
+	}
+}
+
+#hidemobnav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+}
+
+#headertext{
+	display: none;
+	font-size: 30px;
+	color: $header-text-color;
+	margin-top: 0px;
+}
+
+
+@media all and (max-width: 1000px) {
+	#top-nav{
+		background-image: none;
+		height: 39px;
+	}
+}
+
+@media all and (max-width: 1000px) {
+		#hamburger{
+			display: inline-block;
+		}
+
+		#mob-nav{
+			display: inline-block;
+		}
+
+		#top-nav ul {
+			display: none;
+		}
+
+		#top-nav{
+			height: 60px;
+		}
+
+		#headertext{
+			display: inline-block;
+		}
 }

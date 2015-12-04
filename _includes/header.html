@@ -1,5 +1,23 @@
 <header>
+		<script type="text/JavaScript" src = "/js/functions.js"> </script>
+
+
+
+
 	<div id="top-nav">
+		<span>
+		<img id="hamburger" src="/images/hamburger.svg" onclick="expandmobnav()">
+		<p id="headertext">Robin Thompson</p>
+	</span>
+			<ul>
+				{% for nav_page in site.data.navigation %}{% for site_page in site.pages %}{% if site_page.title == nav_page.title %}
+				<li{% if page.url == site_page.url%} class="active"{% endif %}><a href="{{site_page.url}}">{{site_page.title}}</a></li>
+				{% endif %}{% endfor %}{% endfor %}
+			</ul>
+	</div>
+
+
+	<div id="mob-nav">
 		<ul>
 			{% for nav_page in site.data.navigation %}{% for site_page in site.pages %}{% if site_page.title == nav_page.title %}
 			<li{% if page.url == site_page.url%} class="active"{% endif %}><a href="{{site_page.url}}">{{site_page.title}}</a></li>
