@@ -34,7 +34,14 @@ body{
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
-	}
+}
+
+a{
+	text-decoration: none;
+	color: $primary-text-color;
+	@include fading-underline($primary-text-color);
+}
+
 p{
 	margin-left: 4px;
 	margin-right: 4px;
@@ -43,7 +50,7 @@ p{
 
 
 ul{
-	list-style-type: none;
+	list-style-type: decimal;
 }
 
 li{
@@ -110,8 +117,4 @@ li{
 		color: $header-text-color;
 		@include fading-underline($header-text-color);
 	}
-}
-
-#publications ul{
-	list-style-type: decimal;
 }

@@ -1,5 +1,8 @@
 collections:
-  - publications
+  publications:
+    output: false
+  research-projects:
+    output: true
 
 defaults:
   -
