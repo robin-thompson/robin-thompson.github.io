@@ -79,7 +79,7 @@ li{
 	background-color: $header-background-color;
 	background-image: url(images/banner-bg.png);
 	background-repeat: no-repeat;
-	background-position: right;
+	background-size: cover;
 	text-align: left;
 	height: 150px;
 	a{
@@ -109,6 +109,9 @@ li{
 	position: absolute;
 	bottom: 0px;
 	background-color: $header-background-color;
+	background-image: url(images/banner-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: $header-text-color;
 	width: 100%;
 	height: $footer-height;
