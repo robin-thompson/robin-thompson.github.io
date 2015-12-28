@@ -68,9 +68,16 @@ li{
 	padding: 10px;
 	padding-bottom: $footer-height;
 	max-width: 1200px;
-	margin-left: auto;
+	margin-left: 250px;
 	margin-right: auto;
 }
+
+#sidebar{
+	margin: 10px;
+	max-width: 200px;
+	float: left;
+}
+
 
 // Top-Nav
 
@@ -162,14 +169,6 @@ li{
 	margin-top: 0px;
 }
 
-
-@media all and (max-width: 1000px) {
-	#top-nav{
-		background-image: none;
-		height: 39px;
-	}
-}
-
 @media all and (max-width: 1000px) {
 		#hamburger{
 			display: inline-block;
@@ -189,5 +188,12 @@ li{
 
 		#headertext{
 			display: inline-block;
+		}
+		#sidebar{
+			display: none;
+		}
+
+		#content{
+			margin-left: auto;
 		}
 }
