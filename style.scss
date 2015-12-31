@@ -77,6 +77,9 @@ li{
 	max-width: 200px;
 	float: left;
 	padding-bottom: $footer-height;
+	iframe{
+		max-height: 400px;
+	}
 }
 
 
