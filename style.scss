@@ -278,3 +278,12 @@ li{
     opacity:1;
   }
 }
+
+#courses{
+	list-style: none;
+	font-weight: bold;
+	ul{
+		list-style: circle;
+		font-weight: normal;
+	}
+}
