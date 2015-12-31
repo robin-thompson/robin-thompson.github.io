@@ -4,7 +4,8 @@ title: Publications
 
 <div id="publications">
 	<ul>
-	{% for publication in site.publications %}
+
+	{% for publication in site.publications reversed %}
 	<li>{{ publication.authors }} {{ publication.title }} {% if publication.link != null %}(<a href="{{ publication.link }}" target="_blank">{{ publication.linkname }}</a>){% endif %} ({{ publication.year }}) {{ publication.ref }}</li>
 	{% endfor %}
 	</ul>
