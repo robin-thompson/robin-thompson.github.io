@@ -58,6 +58,10 @@ li{
 	padding: 5px;
 }
 
+img{
+	margin: 10px
+}
+
 
 #wrapper{
 	min-height: 100%;
@@ -205,9 +209,10 @@ li{
 
 #quarantineAnimation{
 	position:relative;
-  height:412px;
-  width:450px;
+  height:432px;
+  width: 676px;
   margin:10px auto;
+	float: left;
 	img {
 	  position:absolute;
 	  left:0;
