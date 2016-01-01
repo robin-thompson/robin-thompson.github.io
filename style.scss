@@ -68,11 +68,15 @@ img{
 	position: relative;
 }
 
+#innerWrapper{
+		margin-left: 250px;
+}
+
 #content{
 	padding: 10px;
 	padding-bottom: $footer-height;
 	max-width: 1200px;
-	margin-left: 250px;
+	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
 }
