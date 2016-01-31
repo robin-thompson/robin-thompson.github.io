@@ -1,10 +1,10 @@
 ---
 ---
 $primary-text-color: #000;
-$primary-background-color: #e5e5e5;
+$primary-background-color: #FFF;
 
 $header-background-color: #002147;
-$header-text-color: #e5e5e5;
+$header-text-color: #FFF;
 
 $fade-time: 500ms;
 
@@ -23,13 +23,12 @@ $footer-height: 80px;
 }
 
 html{
-	font-family: roboto;
+	font-family: 'Lato', sans-serif;
 	height: 100%;
 }
 
 
 body{
-	font-family: 'Open Sans', sans-serif;
 	background-color: $primary-background-color;
 	color: $primary-text-color;
 	margin: 0px;
