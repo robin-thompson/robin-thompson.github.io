@@ -9,7 +9,7 @@ $header-text-color: #FFF;
 $fade-time: 500ms;
 
 $footer-height: 80px;
-
+$header-height: 150px;
 
 
 @mixin fading-underline($color){
@@ -64,7 +64,12 @@ img{
 
 #wrapper{
 	min-height: 100%;
-	position: relative;
+	position: absolute;
+	box-sizing: border-box;
+	padding-top: $header-height;
+	padding-bottom: $footer-height;
+	top: 0px;
+	width: 100%;
 }
 
 #innerWrapper{
@@ -81,19 +86,28 @@ img{
 }
 
 #sidebar{
-	margin: 10px;
+	padding: 10px;
 	max-width: 200px;
-	float: left;
-	padding-bottom: $footer-height;
+	position: absolute;
+	margin-bottom: $footer-height;
+	min-height: calc(100% - #{$header-height} - #{$footer-height} - 20px);
+	border-style: solid;
+	border-width: 0px 5px 0px 0px;
+	border-color: #3f558c; /* For if border-image not supported */
+	-webkit-border-image: url(/images/banner-bg.png) 30; /* Safari 3.1-5 */
+	-o-border-image: url(/images/banner-bg.png) 30; /* Opera 11-12.1 */
+	border-image: url(/images/banner-bg.png) 30;
 	iframe{
 		max-height: 400px;
 	}
+
 }
 
 
 // Top-Nav
 
 #top-nav{
+	z-index: 1000;
 	position: relative;
 	background-color: $header-background-color;
 	background-image: url(images/banner-bg.png);

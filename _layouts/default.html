@@ -8,8 +8,9 @@
 	</head>
 	<body>
 		<div id="hidemobnav" onclick="expandmobnav()"></div>
-		<div id="wrapper">
+
 			{% include header.html %}
+			<div id="wrapper">
 			<div id="sidebar">
 			{% include sidebar.html %}
 			</div>
@@ -19,8 +20,10 @@
 				{{content}}
 				</div>
 			</div>
-			{% include footer.html %}
+				{% include footer.html %}
 		</div>
+
+
 	</body>
 
 </html>
