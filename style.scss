@@ -3,7 +3,7 @@
 $primary-text-color: #000;
 $primary-background-color: #FFF;
 
-$header-background-color: #002147;
+$header-background-color: #3f558c;
 $header-text-color: #FFF;
 
 $fade-time: 500ms;
@@ -158,17 +158,19 @@ img{
 
 #hamburger{
 	display: none;
+	margin: 6px;
 }
 
 #mob-nav{
 	display: none;
 	background-color: $header-background-color;
+	background-image: url(/images/banner-bg.png);
   font-size: 1.5em;
   z-index: 1000;
   text-align: left;
   max-width: 300px;
   left: -350px;
-  position: fixed;
+  position: relative;
 	ul{
 		margin: 8px;
 		padding-left: 0px;
@@ -192,7 +194,9 @@ img{
 	display: none;
 	font-size: 30px;
 	color: $header-text-color;
-	margin-top: 0px;
+	position:absolute;
+	top: 0px;
+	margin: 12px;
 }
 
 @media all and (max-width: 1000px) {
@@ -221,6 +225,12 @@ img{
 
 		#content{
 			margin-left: auto;
+		}
+		#innerWrapper{
+			margin-left: auto;
+		}
+		#wrapper{
+			padding-top: 60px;
 		}
 }
 
