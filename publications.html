@@ -6,7 +6,7 @@ title: Publications
 	<ul>
 
 	{% for publication in site.publications reversed %}
-	<li>{{ publication.authors }} {{ publication.title }} {% if publication.link != null %}(<a href="{{ publication.link }}" target="_blank">{{ publication.linkname }}</a>){% endif %} ({{ publication.year }}) {{ publication.ref }}</li>
+	<li>{{ publication.authors }} {{ publication.title }} ({{ publication.year }}) {{ publication.ref }} {% if publication.link != null %}(<a href="{{ publication.link }}" target="_blank">{{ publication.linkname }}</a>){% endif %}</li>
 	{% endfor %}
 	</ul>
 </div>
