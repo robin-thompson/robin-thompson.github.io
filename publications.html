@@ -1,0 +1,12 @@
+---
+title: Publications
+---
+
+<div id="publications">
+	<ul>
+
+	{% for publication in site.publications reversed %}
+	<li>{{ publication.authors }} {{ publication.title }} ({{ publication.year }}) {{ publication.ref }} {% if publication.link != null %}(<a href="{{ publication.link }}" target="_blank">{{ publication.linkname }}</a>){% endif %}</li>
+	{% endfor %}
+	</ul>
+</div>

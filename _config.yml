@@ -1,0 +1,12 @@
+collections:
+  publications:
+    output: false
+  research-projects:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
