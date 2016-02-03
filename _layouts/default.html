@@ -1,29 +1,76 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Robin Thompson - {{page.title}}</title>
-		<link rel="stylesheet" type="text/css" href="/style.css"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	</head>
-	<body>
-		<div id="hidemobnav" onclick="expandmobnav()"></div>
-
-			{% include header.html %}
-			<div id="wrapper">
-			<div id="sidebar">
-			{% include sidebar.html %}
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Robin Thompson - {{page.title}}</title>
+	<meta name="generator" content="Bootply" />
+	<meta name="theme-color" content="#002147">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="icon" type="img/svg+xml" href="/images/logo.svg">
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href="/styles.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-static">
+		<div class="container">
+			<div class="nav-collapse collase">
+				<ul class="nav navbar-nav">
+					{% for nav_page in site.data.navigation %}{% for site_page in site.pages %}{% if site_page.title == nav_page.title %}
+					<li{% if page.url == site_page.url%} class="active"{% endif %}><a href="{{site_page.url}}">{{site_page.title}}</a></li>
+					{% endif %}{% endfor %}{% endfor %}
+				</ul>
+				<ul class="nav navbar-right navbar-nav" id="nav-right">
+          <li>
+            <a href="">robin-thompson.co.uk</a>
+          </li>
+        </ul>
 			</div>
-			<div id="innerWrapper">
-				<div id="content">
-					<h1>{{page.title}}</h1>
-				{{content}}
+		</div>
+	</nav><!-- /.navbar -->
+
+
+		<!-- Begin Body -->
+		<div class="container">
+			<div class="row">
+				<div class="col col-sm-3">
+					<div id="sidebar">
+						<ul class="nav nav-stacked">
+							<li><h3 class="highlight">Twitter</h3></li>
+						</ul>
+						<div class="twitter">
+							<a class="twitter-timeline" href="https://twitter.com/RobinNThompson" data-widget-id="680838504599924740">Tweets by @RobinNThompson</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</div>
+						<ul class="nav nav-stacked">
+							<li><a href="/downloads/RobinThompsonCV.pdf" target="_blank"><h3 class="highlight" style="margin-top:0px;">CV</h3></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col col-sm-9">
+						<div class="panel">
+							<h1 class="title">{{ page.heading }}</h1>
+							<hr>
+					{{content}}
+
+					<hr>
+					<div class="footer">
+						<h4 class="footer-left">Email: <a href="mailto:robin.thompson@lmh.ox.ac.uk">robin.thompson@lmh.ox.ac.uk</a></h4>
+						<h4 class="footer-right">Web design by <a href="https://jakestockwin.co.uk" target="_blank">Jake Stockwin</a></h4>
+						<div>
+							<hr>
+						</div>
+					</div>
 				</div>
 			</div>
-				{% include footer.html %}
-		</div>
 
 
-	</body>
 
-</html>
+			<!-- script references -->
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+			<script src="/js/bootstrap.min.js"></script>
+			<script src="/js/scripts.js"></script>
+		</body>
+		</html>
