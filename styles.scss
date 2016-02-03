@@ -1,6 +1,7 @@
 ---
 ---
-
+$primary-colour: #002147;
+$accent-colour: #005EA5;
 /* bootstrap 3 helpers */
 
 .navbar-form input, .form-inline input {
@@ -24,34 +25,38 @@ header {
 
 /* theme */
 
+.title{
+	color: $primary-colour;
+}
+
 body {
 	color:#828282;
 	background-color:#eee;
 }
 
 a,a:hover {
-	color:#ff3333;
+	color:$accent-colour;
 	text-decoration:none;
 }
 
 .highlight-bk {
-	background-color:#ff3333;
+	background-color:$primary-colour;
 	padding:1px;
 	width:100%;
 }
 
 .highlight {
-	color:#ff3333;
+	color:$primary-colour;
 }
 
 h3.highlight  {
 	padding-top:13px;
 	padding-bottom:14px;
-	border-bottom:2px solid #ff3333;
+	border-bottom:2px solid $primary-colour;
 }
 
 .navbar {
-	background-color:#ff3333;
+	background-color:$primary-colour;
 	color:#ffffff;
 	border:0;
 	border-radius:0;
@@ -60,13 +65,13 @@ h3.highlight  {
 	color:#fff;
 	padding-left:20px;
 	padding-right:20px;
-	border-left:1px solid #ee3333;
+	border-left:1px solid $primary-colour;
 }
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
 	color:#666666;
 }
 .navbar-nav > li:last-child > a {
-	border-right:1px solid #ee3333;
+	border-right:1px solid $primary-colour;
 }
 .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
 	color: #ffffff;
@@ -76,7 +81,7 @@ h3.highlight  {
 	color: #f0f0f0;
 	background-color:transparent;
 	opacity:.9;
-	border-color:#ff3333;
+	border-color:$primary-colour;
 }
 
 .nav .open > a {
@@ -90,6 +95,10 @@ h3.highlight  {
 
 .dropdown-menu {
 	min-width: 250px;
+}
+
+.dropdown-toggle{
+	color: #fff;
 }
 
 .accordion-heading .accordion-toggle, .accordion-inner, .nav-stacked li > a {

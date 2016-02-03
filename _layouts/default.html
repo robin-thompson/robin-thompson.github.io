@@ -24,23 +24,15 @@
 					<li{% if page.url == site_page.url%} class="active"{% endif %}><a href="{{site_page.url}}">{{site_page.title}}</a></li>
 					{% endif %}{% endfor %}{% endfor %}
 				</ul>
+				<ul class="nav navbar-right navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">robin-thompson.co.uk</a>
+          </li>
+        </ul>
 			</div>
 		</div>
 	</nav><!-- /.navbar -->
 
-	<header class="masthead">
-		<div class="container">
-			<div class="row">
-				<div class="col col-sm-6">
-					<h1><a href="#" title="scroll down for your viewing pleasure">Robin Thompson</a>
-						<p class="lead">{{ page.title }}</p></h1>
-					</div>
-					<div class="col col-sm-6">
-					</div>
-				</div>
-			</div>
-
-		</header>
 
 		<!-- Begin Body -->
 		<div class="container">
