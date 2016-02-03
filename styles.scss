@@ -133,6 +133,7 @@ h3.highlight  {
 
 .twitter{
 	max-width: 250px;
+	margin:auto;
 }
 .twitter > iframe{
 		max-height: 400px;
@@ -222,6 +223,11 @@ h3.highlight  {
 		font-weight: normal;
 	}
 }
+
+#nav-right{
+	display: none;
+}
+
 @media (min-width: 450px) {
 	.footer > h4{
 		display: inline-block;
@@ -248,5 +254,8 @@ h3.highlight  {
 		top: 0;
 		width:21.2%;
 		max-width: 262.5px;
+	}
+	#nav-right{
+		display: block;
 	}
 }
