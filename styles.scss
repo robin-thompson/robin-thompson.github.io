@@ -114,12 +114,12 @@ h3.highlight  {
 	padding-right:27px;
 }
 .footer > h4{
-	display: inline-block;
-	width:  49%;
+	display: block;
+	width:  100%;
 	margin:auto;
 }
 .footer-right{
-	text-align: right;
+	text-align: left;
 }
 
 .twitter{
@@ -215,11 +215,11 @@ h3.highlight  {
 }
 @media (min-width: 450px) {
 	.footer > h4{
-		display: block;
-		width:  100%;
+		display: inline-block;
+		width:  49%;
 	}
 	.footer-right{
-		text-align: left;
+		text-align: right;
 	}
 	#quarantineAnimation{
 	  height:420px;
