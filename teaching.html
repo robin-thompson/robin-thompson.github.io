@@ -6,25 +6,47 @@ heading: Teaching
 <p>I hold a stipendiary lectureship in applied mathematics at Lady Margaret Hall, University of Oxford.  The courses that I am currently tutoring there are:</p>
 <ul id="courses">
 
-
-  <li>Prelims (first year)</li>
-  <ul>
-<li><a href="http://www0.maths.ox.ac.uk/courses/course/26259">Geometry</a></li>
+{% assign title1 = 0 %}
+{% assign title2 = 0 %}
+{% assign title3 = 0 %}
+{% assign title4 = 0 %}
+{% for entry in site.data.teaching %}
+  {% if entry.year == 1 %}
+    {% if title1 == 0 %}
+      <li>Prelims (first year)</li>
+      <ul>
+      {% assign title1 = 1 %}
+    {% endif %}
+  {% endif %}
+  {% if entry.year == 2 %}
+    {% if title2 == 0 %}
+      </ul>
+      <li>Part A (second year)</li>
+      <ul>
+      {% assign title2 = 1 %}
+    {% endif %}
+  {% endif %}
+  {% if entry.year == 3 %}
+    {% if title3 == 0 %}
+      </ul>
+      <li>Part B (third year)</li>
+      <ul>
+      {% assign title3 = 1 %}
+    {% endif %}
+  {% endif %}
+  {% if entry.year == 4 %}
+    {% if title4 == 0 %}
+      </ul>
+      <li>Part C (fourth year)</li>
+      <ul>
+      {% assign title4 = 1 %}
+    {% endif %}
+  {% endif %}
+  <li><a href="http://www0.maths.ox.ac.uk/courses/course/{{ entry.courseNumber }}" target="_blank">{{ entry.name }}</a></li>
+{% endfor %}
   </ul>
-
-  <li>Part A (second year)</li>
-  <ul>
-
-<li><a href="http://www0.maths.ox.ac.uk/courses/course/28679">Differential equations I</a></li>
-<li><a href="http://www0.maths.ox.ac.uk/courses/course/28698">Differential equations II</a></li>
-<li><a href="http://www0.maths.ox.ac.uk/courses/course/28778">Integral transforms</a></li>
-<li><a href="http://www0.maths.ox.ac.uk/courses/course/28704">Fluid dynamics and waves</a></li>
-<li><a href="http://www0.maths.ox.ac.uk/courses/course/28705">Numerical analysis</a></li>
-<li><a href="http://www0.maths.ox.ac.uk/courses/course/29084">Mathematical biology</a></li>
-<li><a href="http://www0.maths.ox.ac.uk/courses/course/28827">Calculus of variations</a></li>
-  </ul>
-
 </ul>
+
 
 <p>I have also tutored a number of other applied mathematics courses on the Oxford undergraduate syllabus, and co-supervised undergraduate dissertations and summer projects.</p>
 
