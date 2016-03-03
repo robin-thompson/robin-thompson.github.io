@@ -10,7 +10,17 @@
   ga('create', 'UA-73439523-1', 'auto');
   ga('send', 'pageview');
 
-</script>
+	</script>
+	<script type="text/javascript"
+	    src="http://code.jquery.com/jquery-1.10.1.min.js">
+	</script>
+	<script>
+	function changeDiv(link){
+		$( "#content" ).load(link+" #content");
+	}
+	</script>
+
+
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<title>Robin Thompson - {{page.title}}</title>
@@ -30,7 +40,7 @@
 			<div class="nav-collapse collase">
 				<ul class="nav navbar-nav">
 					{% for nav_page in site.data.navigation %}{% for site_page in site.pages %}{% if site_page.title == nav_page.title %}
-					<li{% if page.url == site_page.url%} class="active"{% endif %}><a href="{{site_page.url}}">{{site_page.title}}</a></li>
+					<li{% if page.url == site_page.url%} class="active"{% endif %}><a onclick="changeDiv('{{site_page.url}}')">{{site_page.title}}</a></li>
 					{% endif %}{% endfor %}{% endfor %}
 				</ul>
 				<ul class="nav navbar-right navbar-nav" id="nav-right">
@@ -63,7 +73,9 @@
 						<div class="panel">
 							<h1 class="title">{{ page.heading }}</h1>
 							<hr>
-					{{content}}
+							<div id="content">
+								{{content}}
+							</div>
 
 					<hr>
 					<div class="footer">
