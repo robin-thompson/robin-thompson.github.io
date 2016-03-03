@@ -8,6 +8,11 @@ $accent-colour: #005EA5;
 	width:auto;
 }
 
+html {
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
+}
+
 /* end */
 
 /* custom theme */
