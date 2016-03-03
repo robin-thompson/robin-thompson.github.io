@@ -17,21 +17,28 @@
 	<script>
 	var duration = 500;
 	var toleranceDuration = 50;
-	function changeDiv(event, link, title, heading){
+	function changeDiv(event, link, title, heading, active){
+		if (document.getElementsByClassName('active').length > 0){
+			document.getElementsByClassName('active')[0].classList.remove('active');
+		}
+		if (active != null && active != undefined){
+			document.getElementById(active).classList.add('active');
+		}
 		event.preventDefault();
 		if(link != location.pathname){
 			away();
 			setTimeout(function(){
-				var state = {'content' : document.getElementById('content').innerHTML, 'title' : title, 'heading' : heading};
+				var content = document.getElementById('content');
 				$( "#content" ).load(link+" #content");
-				window.history.pushState(state, 'Title', link);
 				document.title = "Robin Thompson - "+title;
 				document.getElementById('heading').innerHTML = heading;
+				var state = {'content' : content.innerHTML, 'title' : title, 'heading' : heading};
+				window.history.pushState(state, 'Title', link);
 				setTimeout(function(){back();}, toleranceDuration);
 			}, duration);
 		}
 	}
-	window.onpopstate = function() {
+	window.onpopstate = function(e) {
 		away();
 		setTimeout(function(){
 		var state = window.history.state;
@@ -79,7 +86,7 @@
 			<div class="nav-collapse collase">
 				<ul class="nav navbar-nav">
 					{% for nav_page in site.data.navigation %}{% for site_page in site.pages %}{% if site_page.title == nav_page.title %}
-					<li{% if page.url == site_page.url%} class="active"{% endif %}><a href="{{site_page.url}}" onclick="changeDiv(event,'{{site_page.url}}','{{site_page.title}}','{{site_page.heading}}')">{{site_page.title}}</a></li>
+					<li{% if page.url == site_page.url%} class="active"{% endif %} id="{{site_page.title}}"><a href="{{site_page.url}}" onclick="changeDiv(event,'{{site_page.url}}','{{site_page.title}}','{{site_page.heading}}','{{site_page.title}}')">{{site_page.title}}</a></li>
 					{% endif %}{% endfor %}{% endfor %}
 				</ul>
 				<ul class="nav navbar-right navbar-nav" id="nav-right">

@@ -81,6 +81,7 @@ h3.highlight  {
 .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
 	color: #ffffff;
 	background-color:transparent;
+	pointer-events: none;
 }
 .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
 	color: #f0f0f0;
@@ -88,6 +89,7 @@ h3.highlight  {
 	opacity:.9;
 	border-color:$primary-colour;
 }
+
 
 .nav .open > a {
 	border-color:#777777;
