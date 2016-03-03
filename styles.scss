@@ -259,3 +259,47 @@ h3.highlight  {
 		display: block;
 	}
 }
+
+
+@-webkit-keyframes FadeOut {
+  0% {
+    opacity:1;
+		transform: translateY(0px);
+  }
+  100% {
+    opacity:0;
+		transform: translateY(200px);
+  }
+}
+@keyframes FadeOut {
+  0% {
+    opacity:1;
+		transform: translateY(0px);
+  }
+  100% {
+    opacity:0;
+		transform: translateY(200px);
+  }
+}
+
+
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity:0;
+		transform: translateY(200px);
+  }
+  100% {
+    opacity:1;
+		transform: translateY(0px);
+  }
+}
+@keyframes FadeIn {
+  0% {
+    opacity:0;
+		transform: translateY(200px);
+  }
+  100% {
+    opacity:1;
+		transform: translateY(0px);
+  }
+}
