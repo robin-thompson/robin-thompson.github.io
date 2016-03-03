@@ -1,0 +1,31 @@
+- name: Geometry
+  courseNumber: 26259
+  year: 1
+
+- name: Differential equations I
+  courseNumber: 28679
+  year: 2
+
+- name: Differential equations II
+  courseNumber: 28698
+  year: 2
+
+- name: Integral transforms
+  courseNumber: 28778
+  year: 2
+
+- name: Fluid dynamics and waves
+  courseNumber: 28704
+  year: 2
+
+- name: Numerical analysis
+  courseNumber: 28705
+  year: 2
+
+- name: Mathematical biology
+  courseNumber: 29084
+  year: 2
+
+- name: Calculus of variations
+  courseNumber: 28827
+  year: 2
