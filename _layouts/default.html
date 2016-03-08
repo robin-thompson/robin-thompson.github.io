@@ -33,7 +33,7 @@
 				document.title = "Robin Thompson - "+title;
 				document.getElementById('heading').innerHTML = headingDisplay;
 
-				$( "#content" ).load(link+" #content > *", function(){
+				$( "#content" ).load(link+" #content > div", function(){
 					back();
 					var content = document.getElementById('content');
 					var state = {'content' : content.innerHTML, 'title' : title, 'heading' : heading, 'active' : active};
@@ -130,6 +130,7 @@
 							<h1 id="heading" class="title">{{ page.heading }}</h1>
 							<hr>
 							<div id="content">
+								<div>
 								{% if page.is_research_project == true %}
 									<a href="/research.html" onClick="changeDiv(event, '/research.html', 'Research', 'Research Interests', 'Research')"><< Back to all research projects</a>
 									<br>
@@ -138,6 +139,7 @@
 								{% if page.is_research_project == true %}
 									<a href="/research.html" onClick="changeDiv(event, '/research.html', 'Research', 'Research Interests', 'Research')"><< Back to all research projects</a>
 								{% endif %}
+							</div>
 							</div>
 
 					<hr>
