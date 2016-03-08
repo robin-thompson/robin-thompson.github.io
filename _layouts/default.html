@@ -18,6 +18,7 @@
 	var duration = 500;
 	var toleranceDuration = 50;
 	function changeDiv(event, link, title, heading, active){
+		heading = heading.replace("`", "'");
 		if (document.getElementsByClassName('active').length > 0){
 			document.getElementsByClassName('active')[0].classList.remove('active');
 		}

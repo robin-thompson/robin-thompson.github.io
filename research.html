@@ -11,7 +11,7 @@ to investigate the impact of pathogen evolution on the dynamics of infectious di
 
 <ul id="research-list">
 {% for project in site.research-projects %}
-<li><a href="{{ project.url }}" onclick="changeDiv(event,'{{ project.url }}','Research','{{ project.heading }}',null)">{{ project.heading }}</a></li>
+<li><a href="{{ project.url }}" onclick="changeDiv(event,'{{ project.url }}','Research','{{ project.heading | replace: "'", "`" }}',null)">{{ project.heading }}</a></li>
 {% endfor %}
 </ul>
 
