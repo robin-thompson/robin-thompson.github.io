@@ -121,7 +121,14 @@
 							<h1 id="heading" class="title">{{ page.heading }}</h1>
 							<hr>
 							<div id="content">
+								{% if page.is_research_project == true %}
+									<a href="/research.html" onClick="changeDiv(event, '/research.html', 'Research', 'Research Interests', 'Research')"><< Back to all research projects</a>
+									<br>
+								{% endif %}
 								{{content}}
+								{% if page.is_research_project == true %}
+									<a href="/research.html" onClick="changeDiv(event, '/research.html', 'Research', 'Research Interests', 'Research')"><< Back to all research projects</a>
+								{% endif %}
 							</div>
 
 					<hr>

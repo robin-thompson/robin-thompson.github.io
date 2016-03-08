@@ -10,3 +10,9 @@ defaults:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: research-projects
+    values:
+      is_research_project: true
