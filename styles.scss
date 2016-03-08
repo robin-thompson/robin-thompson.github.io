@@ -72,9 +72,15 @@ h3.highlight  {
 	padding-right:20px;
 	border-left:1px solid $primary-colour;
 }
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+.navbar-nav > li > a:hover {
 	color:#666666;
 }
+
+.navbar-nav > li > a:focus {
+	color:#ffffff;
+	background-color:$primary-colour;
+}
+
 .navbar-nav > li:last-child > a {
 	border-right:1px solid $primary-colour;
 }

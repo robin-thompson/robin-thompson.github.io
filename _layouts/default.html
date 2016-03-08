@@ -18,7 +18,7 @@
 	var duration = 500;
 	var toleranceDuration = 50;
 	function changeDiv(event, link, title, heading, active){
-		heading = heading.replace("`", "'");
+		headingDisplay = heading.replace("`", "'");
 		if (document.getElementsByClassName('active').length > 0){
 			document.getElementsByClassName('active')[0].classList.remove('active');
 		}
@@ -29,28 +29,37 @@
 		if(link != location.pathname){
 			away();
 			setTimeout(function(){
-				var content = document.getElementById('content');
-				$( "#content" ).load(link+" #content");
+
 				document.title = "Robin Thompson - "+title;
-				document.getElementById('heading').innerHTML = heading;
-				var state = {'content' : content.innerHTML, 'title' : title, 'heading' : heading};
-				window.history.pushState(state, 'Title', link);
-				setTimeout(function(){back();}, toleranceDuration);
+				document.getElementById('heading').innerHTML = headingDisplay;
+
+				$( "#content" ).load(link+" #content > *", function(){
+					back();
+					var content = document.getElementById('content');
+					var state = {'content' : content.innerHTML, 'title' : title, 'heading' : heading, 'active' : active};
+					window.history.pushState(state, 'Title', link);
+				});
 			}, duration);
 		}
 	}
 	window.onpopstate = function(e) {
 		away();
 		setTimeout(function(){
-		var state = window.history.state;
+			var state = window.history.state;
+			if (document.getElementsByClassName('active').length > 0){
+				document.getElementsByClassName('active')[0].classList.remove('active');
+			}
+			if (state['active'] != null && state['active'] != undefined){
+				document.getElementById(state['active']).classList.add('active');
+			}
 		  document.getElementById('content').innerHTML = state['content'];
-			document.getElementById('heading').innerHTML = state['heading'];
+			document.getElementById('heading').innerHTML = state['heading'].replace("`", "'");
 			document.title = "Robin Thompson - "+state['title'];
-			setTimeout(function(){back();}, toleranceDuration);
+			back();
 		}, duration);
 	};
-	function updateState(link, title, heading){
-		var state = {'content' : document.getElementById('content').innerHTML, 'title' : title, 'heading' : heading};
+	function updateState(link, title, heading, active){
+		var state = {'content' : document.getElementById('content').innerHTML, 'title' : title, 'heading' : heading, 'actvie' : active};
 		window.history.replaceState(state, 'Title', link)
 	}
 	function away(){
@@ -81,7 +90,7 @@
 	<![endif]-->
 	<link href="/styles.css" rel="stylesheet">
 </head>
-<body onload="updateState('{{page.url}}','{{page.title}}','{{page.heading}}')">
+<body onload="updateState('{{page.url}}','{{page.title}}','{{page.heading | replace: "'", "`" }}','{{page.title}}')">
 	<nav class="navbar navbar-static">
 		<div class="container">
 			<div class="nav-collapse collase">
